@@ -1,0 +1,13 @@
+<mat-card>
+    <mat-card-header>Boton que al pulsarlo cambia de estado</mat-card-header>
+    <mat-card-content>
+        <button mat-button (click)="changeState()">
+           Cambiar estado
+        </button>
+    </mat-card-content>
+    <mat-card-content>
+        <button mat-button [disabled]="stateButton" (click)="changeState()">
+           {{estado}}
+        </button>
+    </mat-card-content>
+</mat-card>

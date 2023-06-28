@@ -1,0 +1,13 @@
+<mat-card>
+    <mat-card-header>Boton que al pulsarlo cambia de color</mat-card-header>
+    <mat-card-content>
+        <button mat-button (click)="colorChange()">
+            Cambiar color
+        </button>
+    </mat-card-content>
+    <mat-card-content>
+        <button mat-raised-button   [color]="finalColor">
+            {{colorName}}
+        </button>
+    </mat-card-content>
+</mat-card>

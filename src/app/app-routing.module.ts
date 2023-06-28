@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ButtonShowcaseComponent } from './button-showcase/button-showcase.component';
+import { ButtonShowcasePageComponent } from './pages/button-showcase-page/button-showcase-page.component';
+import { ProgressSpinnerShowcasePageComponent } from './pages/progress-spinner-showcase-page/progress-spinner-showcase-page.component';
+
 
 const routes: Routes = [
-  { path: 'button',component: ButtonShowcaseComponent}
+  { path: 'button',component: ButtonShowcasePageComponent},
+  { path: 'progressSpinner', component:ProgressSpinnerShowcasePageComponent }
 ];
 
 @NgModule({
