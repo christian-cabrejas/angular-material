@@ -18,11 +18,16 @@
           </button>
         </mat-list-item>
         <mat-list-item role="listitem">
-          <button mat-button>
-            <mat-icon>not_accessible</mat-icon>
+          <button mat-button routerLink="snackbar">
+            Snackbar
           </button>
         </mat-list-item>
-      </mat-list>
+        <mat-list-item role="listitem">
+          <button mat-button routerLink="dialog">
+            Dialog
+          </button>
+        </mat-list-item>
+      </mat-list>     
     </mat-drawer>
     <mat-drawer-content>
       <router-outlet></router-outlet>

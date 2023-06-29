@@ -1,0 +1,26 @@
+<mat-card>
+    <mat-form-field>
+        <mat-label>
+            Segundos:
+        </mat-label>
+        <input type="number" matInput  [(ngModel)]="durationInSeconds">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>
+            Mensaje
+        </mat-label>
+        <input matInput value="click click" #message>
+    </mat-form-field>
+    
+    <mat-form-field>
+        <mat-label>
+            Action
+        </mat-label>
+        <input matInput value="BOOM" #action>
+    </mat-form-field>
+
+    
+    
+    <button mat-stroked-button (click)="clickSnackbar(message.value, action.value)">Cliiiiick</button>
+</mat-card>
+

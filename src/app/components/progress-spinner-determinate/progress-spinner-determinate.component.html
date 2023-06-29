@@ -1,7 +1,28 @@
 <mat-card>
+  <mat-card-content>
     <mat-card-header>Configuraciones:</mat-card-header>
     <section>
-        <label>Tipo: </label>
-        
+      <label>Modo: </label>
+      <mat-radio-group [(ngModel)]="mode">
+        <mat-radio-button value="determinate"> Determinado </mat-radio-button>
+        <mat-radio-button value="indeterminate">
+          Indeterminado
+        </mat-radio-button>
+      </mat-radio-group>
     </section>
+    <section *ngIf="mode === 'determinate'">
+      <label>Progreso: </label>
+      <label class="label">{{ value }}%</label>
+      <mat-slider class="slider">
+        <input type="range" [(ngModel)]="value" matSliderThumb />
+      </mat-slider>
+    </section>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-content>
+    <mat-card-header>Resultado: </mat-card-header>
+    <mat-progress-spinner [mode]="mode" [value]="value"> </mat-progress-spinner>
+  </mat-card-content>
 </mat-card>
