@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { NgIf } from '@angular/common';
 import { MatCard, MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 
 export interface DialogData{
   manga: string;
@@ -25,7 +26,9 @@ export interface DialogData{
     MatButtonModule,
     NgIf,
     MatDialogModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatIconModule
   ]
 })
 export class DialogShowcaseCompleteComponent {
@@ -37,8 +40,7 @@ export class DialogShowcaseCompleteComponent {
   }
 
   startDialog(){
-     const dialogRef = this.matDialog.open(DialogShowcasePopupComponent,{data: {name:this.name, manga:this.manga}});
-
+     const dialogRef = this.matDialog.open(DialogShowcasePopupComponent,{data: {name:this.name, manga:this.manga}, width: '350px', height:'300px' },);
      dialogRef.afterClosed().subscribe(result => { console.log('Dialog Closed');
       this.manga= result;
     })

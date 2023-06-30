@@ -1,12 +1,14 @@
-<h1>Cuaaal</h1>
 <mat-card>
-    <mat-card-content>
-        <mat-label>Participant name?</mat-label>
-        <input matInput [(ngModel)]="name">
-        <button mat-raised-button (click)="startDialog()" >Click to start dialog</button>
-        <li *ngIf="manga">
-            The manga you choosed: <em>{{manga}}</em>
-        </li>
-    </mat-card-content>
-
+  <mat-card-content>
+    <mat-form-field appearance="outline">
+      <mat-label>User name?</mat-label>
+      <input matInput [(ngModel)]="name" />
+    </mat-form-field>
+    <button mat-raised-button (click)="startDialog()" class="btnStart">
+      <mat-icon> open_in_new </mat-icon>
+    </button>
+    <li *ngIf="manga">
+      The manga you choosed: <em>{{ manga }}</em>
+    </li>
+  </mat-card-content>
 </mat-card>

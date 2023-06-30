@@ -1,1 +1,12 @@
-<p>dialog-showcase-popup works!</p>
+<h1 mat-dialog-title>Welcome {{data.name}}</h1>
+<div matDialogContent>
+    <p>Whats ur favorite manga?</p>
+    <mat-form-field class="popup">
+        <mat-label>Manga favorite </mat-label>
+        <input matInput [(ngModel)]="data.manga">
+    </mat-form-field>
+</div>
+<div mat-dialog-action class="btn">
+    <button mat-button (click)="onNoClick()">No thanks</button>
+    <button mat-button [mat-dialog-close]="data.manga" cdkFocusInitial class="btn">Ok</button>
+</div>
